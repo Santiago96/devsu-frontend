@@ -1,0 +1,20 @@
+<table>
+    <thead>
+      <tr>
+        <th>Numero de cuenta</th>
+        <th>Tipo</th>
+        <th>Saldo inicial</th>
+        <th>Estado</th>        
+        <th>Cliente</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let account of accounts">
+        <td>{{ account.numberAccount }}</td>
+        <td>{{ account.type }}</td>
+        <td>{{ account.balance }}</td>
+        <td>{{ account.state ? 'Active' : 'Inactive' }}</td>        
+        <td>{{ account.client.name }}</td>
+      </tr>
+    </tbody>
+  </table>

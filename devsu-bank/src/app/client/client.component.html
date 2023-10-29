@@ -1,0 +1,22 @@
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Direcction</th>
+      <th>Telefono</th>
+      <th>Edad</th>
+      <th>Estado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let client of clients">
+      <td>{{ client.name }}</td>
+      <td>{{ client.address }}</td>
+      <td>{{ client.phone }}</td>
+      <td>{{ client.age }}</td>
+      <td>{{ client.state }}</td>
+    </tr>
+  </tbody>
+</table>
+

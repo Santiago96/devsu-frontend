@@ -1,0 +1,28 @@
+<table>
+    <thead>
+      <tr>
+        <th>Transaction ID</th>
+        <th>Date</th>
+        <th>Type</th>
+        <th>State</th>
+        <th>Initial Balance</th>
+        <th>Transaction Balance</th>
+        <th>Movement</th>
+        <th>Client</th>
+        <th>Account</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of transactions">
+        <td>{{ transaction.transactionId }}</td>
+        <td>{{ transaction.date | date:'yyyy-MM-dd HH:mm:ss' }}</td>
+        <td>{{ transaction.type }}</td>
+        <td>{{ transaction.state }}</td>
+        <td>{{ transaction.balanceInitial | currency:'USD':'symbol':'1.2-2' }}</td>
+        <td>{{ transaction.balanceTransaction | currency:'USD':'symbol':'1.2-2' }}</td>
+        <td>{{ transaction.movement }}</td>
+        <td>{{ transaction.client.name }}</td>
+        <td>{{ transaction.account.numberAccount }}</td>
+      </tr>
+    </tbody>
+  </table>

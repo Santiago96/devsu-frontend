@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'devsu-bank';
+  imageSource = 'assets/images/logo_bank.png';
+
+  constructor() {
+  }
 }
